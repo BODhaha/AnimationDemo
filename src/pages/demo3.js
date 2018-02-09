@@ -9,22 +9,22 @@ export default class Demo2 extends Component {
       this._value = value
     })
     this.panResponder = PanResponder.create({
-      onStartShouldSetPanResponder: (evt, gestureState) => true,
-      onMoveShouldSetPanResponder: (evt, gestureState) => true,
-      onPanResponderGrant: (e, gestureState) => {
+      onStartShouldSetPanResponder: (evt, gestureState) => true, // 用户开始触摸时，是否愿意成为响应者
+      onMoveShouldSetPanResponder: (evt, gestureState) => true, // 用户移动时，询问是否愿意成为响应者
+      onPanResponderGrant: (e, gestureState) => { // 开始响应
         this.animatedValue.setOffset({
           x: this._value.x,
           y: this._value.y
         })
         this.animatedValue.setValue({x: 0, y: 0})
       },
-      onPanResponderMove: Animated.event([
+      onPanResponderMove: Animated.event([ // 移动
         null, {
           dx: this.animatedValue.x,
           dy: this.animatedValue.y
         }
       ]),
-      onPanResponderRelease: (e, gestureState) => {
+      onPanResponderRelease: (e, gestureState) => { // 触摸结束
         this.animatedValue.flattenOffset()
         Animated.decay(this.animatedValue, {
           deceleration: 0.997,

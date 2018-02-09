@@ -31,7 +31,25 @@ export default class App extends Component {
     const { navigate } = this.props.navigation
     return (
       <View style={styles.container}>
-        <TouchableOpacity onPress={() => {navigate('Demo1')}} style={styles.row}>
+        <TouchableOpacity onPress={() => {navigate('HelloWorld01')}} style={styles.row}>
+          <Text>HelloWorld JSX</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => {navigate('HelloWorld02')}} style={styles.row}>
+          <Text>HelloWorld Javascript</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => {navigate('Props')}} style={styles.row}>
+          <Text>Props</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => {navigate('State')}} style={styles.row}>
+          <Text>State 父组件 state 改变会重新渲染父组件及相应的子组件</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => {navigate('SetState')}} style={styles.row}>
+          <Text>SetState</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => {navigate('Style')}} style={styles.row}>
+          <Text>Style</Text>
+        </TouchableOpacity>
+        {/* <TouchableOpacity onPress={() => {navigate('Demo1')}} style={styles.row}>
           <Text>Animated.timing</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => {navigate('Demo2')}} style={styles.row}>
@@ -45,7 +63,7 @@ export default class App extends Component {
         </TouchableOpacity>
         <TouchableOpacity onPress={() => {navigate('Demo5')}} style={styles.row}>
           <Text>heart</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
     );
   }

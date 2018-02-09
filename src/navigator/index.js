@@ -6,13 +6,18 @@ import Demo2 from '../pages/demo2'
 import Demo3 from '../pages/demo3'
 import Demo4 from '../pages/demo4'
 import Demo5 from '../pages/demo5'
-import Demo6 from '../pages/demo6'
+import HelloWorld01 from '../pages/HelloWorld01'
+import HelloWorld02 from '../pages/HelloWorld02'
+import Props from '../pages/Props'
+import State from '../pages/State'
+import SetState from '../pages/SetState'
+import Style from '../pages/Style'
 
 const RootNavigator = StackNavigator({
   App: {
     screen: App,
     navigationOptions: ({navigation}) => ({
-      title: '动画 demo'
+      title: 'demo'
     })
   },
   Demo1: {
@@ -45,10 +50,40 @@ const RootNavigator = StackNavigator({
       title: 'Demo5'
     })
   },
-  Demo6: {
-    screen: Demo6,
+  HelloWorld01: {
+    screen: HelloWorld01,
     navigationOptions: ({navigation}) => ({
-      title: 'Demo6'
+      title: 'HelloWorld JSX'
+    })
+  },
+  HelloWorld02: {
+    screen: HelloWorld02,
+    navigationOptions: ({navigation}) => ({
+      title: 'HelloWorld Javascript'
+    })
+  },
+  Props: {
+    screen: Props,
+    navigationOptions: ({navigation}) => ({
+      title: 'Props'
+    })
+  },
+  State: {
+    screen: State,
+    navigationOptions: ({navigation}) => ({
+      title: 'State'
+    })
+  },
+  SetState: {
+    screen: SetState,
+    navigationOptions: ({navigation}) => ({
+      title: 'SetState'
+    })
+  },
+  Style: {
+    screen: Style,
+    navigationOptions: ({navigation}) => ({
+      title: 'Style'
     })
   }
 })

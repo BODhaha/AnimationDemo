@@ -4,7 +4,7 @@ import {View, Text, StyleSheet, Animated, TouchableWithoutFeedback } from 'react
 export default class Demo2 extends Component {
   constructor (props) {
     super(props)
-    this.handlePressIn = this.handlePressIn.bind(this) // 为什么要 bind(this) 作用域相关？？？
+    this.handlePressIn = this.handlePressIn.bind(this)
     this.handlePressOut = this.handlePressOut.bind(this)
   }
 
